@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IttTune.Screens.HomeScreen"
+             Title="Traducir">
+    <ScrollView>
+        <VerticalStackLayout>
+            
+            <Entry  
+               x:Name="txtInput"
+               Placeholder="Texto a traducir"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="camara.jpg" Grid.Column="0" />
+                <Button Clicked="btnCamara" Text=" "  FontSize="50" FontAttributes="Italic" TextColor="Wheat" BackgroundColor="Transparent" Grid.Column="0" />
+
+                <Image Source="mic.jpg" Grid.Column="1" />
+                <Button Clicked="btnMicrofono" Text=" "  FontSize="50" FontAttributes="Italic" TextColor="Wheat" BackgroundColor="Transparent" Grid.Column="1" />
+
+                <Button Text="Traducir" FontSize="Medium" FontAttributes="Bold" Grid.Column="2" BackgroundColor="LightGreen" Clicked="btnTraducir"/>
+            </Grid>
+            <Entry  x:Name="txtOutput"   Placeholder="Regreso de texto"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
